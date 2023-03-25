@@ -1,17 +1,19 @@
 <?php
 
+use App\Domain\Notification\Notifier;
 use App\Domain\User\Command\ChangeUserName;
 use App\Domain\User\Command\RegisterUser;
 use App\Domain\User\UserName;
 use App\Domain\User\UserRepository;
 use App\Infrastructure\InMemoryUserRepository;
+use App\Infrastructure\Notification\EchoNotifier;
 use Ecotone\Lite\EcotoneLiteApplication;
 use PHPUnit\Framework\Assert;
 use Ramsey\Uuid\Uuid;
 
 require __DIR__ . '/vendor/autoload.php';
 
-$ecotoneLite = EcotoneLiteApplication::bootstrap(pathToRootCatalog: __DIR__, classesToRegister: [UserRepository::class => new InMemoryUserRepository()]);
+$ecotoneLite = EcotoneLiteApplication::bootstrap(pathToRootCatalog: __DIR__, classesToRegister: [UserRepository::class => new InMemoryUserRepository(), Notifier::class => new EchoNotifier()]);
 
 /** In case of using Symfony or Laravel, Buses will be automatically available in your dependency container */
 $commandBus = $ecotoneLite->getCommandBus();
