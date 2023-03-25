@@ -19,7 +19,7 @@ final class UserName
         return new self($name);
     }
 
-    public function getName(): string
+    public function toString(): string
     {
         return $this->name;
     }

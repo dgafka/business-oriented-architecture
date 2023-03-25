@@ -13,7 +13,7 @@ final class UserNameTest extends TestCase
     {
         $userName = UserName::create('John');
 
-        $this->assertEquals('John', $userName->getName());
+        $this->assertEquals('John', $userName->toString());
     }
 
     public function test_throwing_exception_when_name_is_too_short(): void

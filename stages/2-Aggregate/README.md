@@ -1,4 +1,4 @@
-# 1. CQRS
+# 2. Aggregates
 
 ## Solved Common Problems
 
@@ -68,3 +68,24 @@ Then using Command Bus we are sending as `metadata` aggregate id, so Ecotone can
 ```php
 $commandBus->sendWithRouting("user.block", metadata: ["aggregate.id" => 1]);
 ```
+
+### 3. Lack of isolation for testing flows
+
+When our application starts publishing events it becomes cumbersome to test the flows.  
+This is due to events triggers side effects, which in result triggers part of the system that were not supposed to be tested in given scenario.  
+Due to difficulties in writing such tests we often write few of them, or spend enormous amount of time on making them work correctly.
+ 
+Ecotone provides a way to set up a test for given set of classes, therefore we only test what we want to test, and we do it in isolation.
+If you take a look on `UserTest` you will see that even so that even that `UserWasRegistered` event is published it does not trigger `NotificationService` 
+as we have not included it into `test scenario`.
+
+```php
+EcotoneLite::bootstrapFlowTesting(
+    [User::class, InMemoryUserRepository::class], // Classes containing Ecotone's attributes that we want to test
+    [new InMemoryUserRepository()] // Services available in test scenario, we may also pass Dependency Container
+);
+```
+
+Flow tests in Ecotone are fast and easy to write, actually you may treat it as a part of your unit test suite, which verify behaviour of your aggregates.
+
+
