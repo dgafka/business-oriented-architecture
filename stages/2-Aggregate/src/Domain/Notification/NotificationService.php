@@ -10,10 +10,10 @@ use Ecotone\Modelling\Attribute\EventHandler;
 final class NotificationService
 {
     #[EventHandler]
-    public function sendNotification(UserWasRegistered $event): void
+    public function sendNotification(UserWasRegistered $event, Notifier $notifier): void
     {
-        // send notification by calling some external service over HTTP
+        // in real scenario send notification by calling some external service over HTTP
 
-        echo sprintf("Notification to the user %s was sent. \n", $event->name->toString());
+        $notifier->sendFor($event->userId, sprintf("Notification to the user %s was sent. \n", $event->name->toString()));
     }
 }
