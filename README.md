@@ -16,10 +16,11 @@ For the need of the description, given terminology is used:
 
 * `Service` - This is your class registered in dependency injection container.
 * `Application` - This your whole application which contains of all the necessary configuration to expose your business logic to the world
+* `Aggregate` - This is your business logic which is grouped together, e.g. `Order` or `Customer`. Consider is as entity rich in behaviours.
 * `Message Handler` - This is method of your class which is registered as message handler in messaging infrastructure, e.g. `Command/Event/Query Handler`.
 * `Message` - This is message which is send to messaging infrastructure, e.g. `Command/Event/Query`.
 * `Message Channel` - This is channel which is used to send messages to messaging infrastructure, e.g. Think of it as a transport layer.
-* `Message Consumer` - This is consumer which is used to consume messages from `Message Channels` to execute your `Message Handlers`.
+* `Message Consumer` - This is consumer which is used to consume messages from `Message Channels` to execute your `Message Handlers`. Often called `"Worker"` in PHP world.
 
 ## Executing demos
 
@@ -30,3 +31,7 @@ In each stage you will also find related tests, to get a feeling of how you can 
 
 Demos are using [Ecotone Lite](https://docs.ecotone.tech/install-php-service-bus#install-ecotone-lite-no-framework), this is framework agnostic way to run Ecotone.
 Yet Ecotone integrates with Symfony or Laravel, you can find installation steps in the [docs](https://docs.ecotone.tech/install-php-service-bus).
+
+## More details
+
+If you want to learn more about Ecotone and powerful concepts it provides, please visit [latest blog post](https://blog.ecotone.tech/building-reactive-message-driven-systems-in-php/), which describes the topic in details. 
