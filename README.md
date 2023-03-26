@@ -24,7 +24,9 @@ For the need of the description, given terminology is used:
 ## Executing demos
 
 To execute demo install dependencies using `composer install` and then run `php run_example.php`.  
-In each stage you will also find related tests, to get a feeling of how you can test given level of architecture.  
+In each stage you will also find related tests, to get a feeling of how you can test given level of architecture.
+
+You can also run it via docker. Start containers using `docker-compose up -d` and then `docker exec -it ecotone_demo php stages/1-CQRS/run_example.php`
 
 ## Using Symfony or Laravel
 
