@@ -7,9 +7,10 @@ And on top of that provide higher level abstraction to work with business flows 
 
 ## Demo examples
 
-This repository provides examples of how to use Ecotone to focus on the business part of the system.       
-In `stages` catalog you will find different levels on which you can focus your architecture.  
-Each stage contains of `README.md` file with description of what problems `Ecotone` solves, so you can focus on business problems.  
+
+In this repository I am showing different levels of architecture using Ecotone and what problems does it solve.   
+Each stage pushing us more into business oriented software that moves the focus out of technical problems, back to the domain. 
+Read more in `README.md` of each stage.
 
 For the need of the description, given terminology is used:
 
