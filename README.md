@@ -7,7 +7,6 @@ And on top of that provide higher level abstraction to work with business flows 
 
 ## Demo examples
 
-
 In this repository I am showing different levels of architecture using Ecotone and what problems does it solve.   
 Each stage pushing us more into business oriented software that moves the focus out of technical problems, back to the domain. 
 Read more in `README.md` of each stage.
