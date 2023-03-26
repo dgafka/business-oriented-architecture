@@ -1,5 +1,7 @@
 # 2. Aggregates
 
+Introduce `User` as `Aggregate`, which publish `UserWasRegistered` event.
+
 ## Solved Common Problems
 
 ### 1. A lot of boilerplate for calling aggregates  

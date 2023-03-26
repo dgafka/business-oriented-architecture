@@ -1,5 +1,7 @@
 # 1. CQRS
 
+Introduce `UserService` as `Command` and `Query` Handler.
+
 ## Solved Common Problems
 
 ### 1. Need for manual wiring of services to connect them to messaging infrastructure  
