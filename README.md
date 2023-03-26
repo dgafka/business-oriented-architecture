@@ -1,10 +1,9 @@
 # Business focused architecture
 
 Main tenet of [Ecotone Framework](https://docs.ecotone.tech/) is to allow developers focus on the business problems, not technical ones.      
-When we can focus on the business we start deliver features much quicker and the solutions we produce are more accurate with what the business needs.  
-Yet technical problems so we can not ignore them, that's why we need resilient and scalable foundation.   
-Ecotone porvides Message-Driven architecture based on [EIP book](https://www.enterpriseintegrationpatterns.com/) similiar to [Spring Integration](https://spring.io/projects/spring-integration) which is foundation project for Netflix's [Spring Cloud](https://spring.io/projects/spring-cloud).  
-And on top of that provide higher level abstraction to work in [DDD](https://www.domainlanguage.com/ddd/blue-book/) like methodology.
+When we can focus on the business we start deliver features much quicker and the solutions we produce are more accurate with what the business needs.   
+Ecotone provides resilient Message-Driven architecture based on [EIP book](https://www.enterpriseintegrationpatterns.com/) similiar to [Spring Integration](https://spring.io/projects/spring-integration) which is foundation project for Netflix's [Spring Cloud](https://spring.io/projects/spring-cloud).  
+And on top of that provide higher level abstraction to work with business flows and invariants using [DDD](https://www.domainlanguage.com/ddd/blue-book/) like methodology.
 
 ## Demo examples
 
