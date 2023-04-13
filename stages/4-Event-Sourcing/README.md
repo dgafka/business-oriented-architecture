@@ -1,4 +1,4 @@
-# 3. Asynchronous Message Handling
+# 3. Event Sourcing
 
 Introduce Basket Event Sourcing Aggregate.   
 Running `run_example.php` will automatically create Queue in `RabbitMQ` and poll from it.
